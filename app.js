@@ -1,23 +1,19 @@
 // VARIABLES //
 
-const hideOverlay = document.getElementById('overlay');
+const overlay = document.getElementById('overlay');
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
-const startButton = document.getElementByClassName('btn_reset');
-let missed = 0;
+const startGame = document.getElementByClassName('btn_reset');
+let playerScore = 0;
+let wrongGuesses = 0;
 let randomPhrase = Math.floor( Math.random() * phrases.length );
 
 // ARRAY //
 let phrases [
-  // PHRASE 1 //
   'We will cross that bridge when we come to it',
-  // PHRASE 2 //
   'A penny for your thoughts',
-  // PHRASE 3 //
   'Birds of a feather flock together',
-  // PHRASE 4 //
   'Once in  a blue moon',
-  // PHRASE 5 //
   'The early bird gets the worm',
 ];
 
