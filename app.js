@@ -9,13 +9,21 @@ let wrongGuesses = 0;
 let randomPhrase = Math.floor( Math.random() * phrases.length );
 
 // ARRAY //
-let phrases [
+const phrases [
   'We will cross that bridge when we come to it',
   'A penny for your thoughts',
   'Birds of a feather flock together',
   'Once in  a blue moon',
   'The early bird gets the worm',
 ];
+
+// LISTEN FOR THE START GAME BUTTON TO BE PRESSED //
+startButton.addEventListener('click', () => {
+  if () {
+    hideOverlay.style.display = 'block';
+  } else {
+    hideOverlay.style.display = 'none'
+});
 
 // RETURN A RANDOM PHRASE FROM AN ARRAY //
 const getRandomPhraseAsArray = arr => {
@@ -33,13 +41,7 @@ const checkLetter = button => {
 const checkWin = () => {
 
 }
-// LISTEN FOR THE START GAME BUTTON TO BE PRESSED //
-startButton.addEventListener('click', () => {
-  if () {
-    hideOverlay.style.display = 'block';
-  } else {
-    hideOverlay.style.display = 'none'
-});
+
 // LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED //
 qwerty.addEventListener('click', e => {
 
