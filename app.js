@@ -23,11 +23,8 @@ let phrases [
 
 // RETURN A RANDOM PHRASE FROM AN ARRAY //
 const getRandomPhraseAsArray = arr => {
-  if () {
-    hideOverlay.style.display = 'block';
-  } else {
-    hideOverlay.style.display = 'none'
-});
+
+}
 // ADDS THE LETTERS OF A STRING TO THE DISPLAY //
 const addPhraseToDisplay => {
 
@@ -42,7 +39,10 @@ const checkWin = () => {
 }
 // LISTEN FOR THE START GAME BUTTON TO BE PRESSED //
 startButton.addEventListener('click', () => {
-
+  if () {
+    hideOverlay.style.display = 'block';
+  } else {
+    hideOverlay.style.display = 'none'
 });
 // LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED //
 qwerty.addEventListener('click', e => {
