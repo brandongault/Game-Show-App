@@ -1,5 +1,6 @@
 // VARIABLES //
 
+const hideOverlay = document.getElementById('overlay');
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const startButton = document.getElementByClassName('btn_reset');
@@ -22,8 +23,11 @@ let phrases [
 
 // RETURN A RANDOM PHRASE FROM AN ARRAY //
 const getRandomPhraseAsArray = arr => {
-  
-}
+  if () {
+    hideOverlay.style.display = 'block';
+  } else {
+    hideOverlay.style.display = 'none'
+});
 // ADDS THE LETTERS OF A STRING TO THE DISPLAY //
 const addPhraseToDisplay => {
 
