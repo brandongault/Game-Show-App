@@ -6,7 +6,6 @@ const phrase = document.getElementById('phrase');
 const startGame = document.getElementByClassName('btn_reset');
 let playerScore = 0;
 let wrongGuesses = 0;
-let randomPhrase = Math.floor( Math.random() * phrases.length );
 
 // ARRAY //
 const phrases [
@@ -26,8 +25,9 @@ startButton.addEventListener('click', () => {
 });
 
 // RETURN A RANDOM PHRASE FROM AN ARRAY //
-const getRandomPhraseAsArray = arr => {
-
+function getRandomPhraseAsArray(arr) {
+  const randomPhrase = Math.floor( Math.random() * phrases.length );
+    randomPhrase = phrase.split;
 }
 // ADDS THE LETTERS OF A STRING TO THE DISPLAY //
 const addPhraseToDisplay => {
