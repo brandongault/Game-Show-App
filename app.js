@@ -26,8 +26,8 @@ startButton.addEventListener('click', () => {
 
 // RETURN A RANDOM PHRASE FROM AN ARRAY //
 function getRandomPhraseAsArray(arr) {
-  const randomPhrase = Math.floor( Math.random() * phrases.length );
-    randomPhrase = phrase.split;
+  const randomPhrase = Math.floor( Math.random() * arr.length );
+    return arr[randomPhrase].split("");
 }
 // ADDS THE LETTERS OF A STRING TO THE DISPLAY //
 const addPhraseToDisplay => {
