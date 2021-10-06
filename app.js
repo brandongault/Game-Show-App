@@ -5,6 +5,7 @@ const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const startGame = document.querySelector('.btn__reset');
 const letters = document.getElementsByTagName('button');
+const ul = phrase.firstElementChild;
 let playerScore = 0;
 let wrongGuesses = 0;
 
