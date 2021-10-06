@@ -4,6 +4,7 @@ const overlay = document.getElementById('overlay');
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const startGame = document.querySelector('.btn__reset');
+const letters = document.getElementsByTagName('button');
 let playerScore = 0;
 let wrongGuesses = 0;
 
@@ -27,9 +28,23 @@ function getRandomPhraseAsArray(arr) {
     return arr[randomPhrase].split("");
 }
 // ADDS THE LETTERS OF A STRING TO THE DISPLAY //
-const addPhraseToDisplay = () => {
+const randomPhraseSelected = getRandomPhraseAsArray;
 
+const addPhraseToDisplay = (getRandomPhraseAsArray) => {
+  for ( let i = 0; i < getRandomPhraseAsArray.length; i++ ) {
+    const listItem = document.createElement('li');
+    listItem.textContent = getRandomPhraseAsArray[i];
+    ul.appendChild(listItem);
+    if (getRandomPhraseArray[i] !== " " ) {
+      listItem.className = "letter";
+    } else {
+      listItem.className = "space";
+    }
+  }
 }
+
+addPhraseToDisplay(randomPhraseSelected);
+
 // CHECK IF A LETTER IS IN THE PHRASE //
 const checkLetter = button => {
 
