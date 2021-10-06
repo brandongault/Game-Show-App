@@ -36,7 +36,7 @@ const addPhraseToDisplay = (getRandomPhraseAsArray) => {
     const listItem = document.createElement('li');
     listItem.textContent = getRandomPhraseAsArray[i];
     ul.appendChild(listItem);
-    if (getRandomPhraseArray[i] !== " " ) {
+    if (getRandomPhraseAsArray[i] !== " " ) {
       listItem.className = "letter";
     } else {
       listItem.className = "space";
