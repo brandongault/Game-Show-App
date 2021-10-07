@@ -45,7 +45,6 @@ const addPhraseToDisplay = (arr) => {
     }
   }
 }
-addPhraseToDisplay(randomPhraseSelected);
 
 // CHECK IF A LETTER IS IN THE PHRASE //
 const checkLetter = button => {
