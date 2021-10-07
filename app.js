@@ -11,11 +11,11 @@ let wrongGuesses = 0;
 
 // ARRAY //
 const phrases = [
-  'We will cross that bridge when we come to it',
-  'A penny for your thoughts',
-  'Birds of a feather flock together',
-  'Once in  a blue moon',
-  'The early bird gets the worm',
+  'we will cross that bridge when we come to it',
+  'a penny for your thoughts',
+  'birds of a feather flock together',
+  'once in  a blue moon',
+  'the early bird gets the worm',
 ];
 
 // LISTEN FOR THE START GAME BUTTON TO BE PRESSED //
@@ -49,11 +49,11 @@ const addPhraseToDisplay = (arr) => {
 // CHECK IF A LETTER IS IN THE PHRASE //
 const checkLetterSelected = (letterSelected) => {
   const checkLetter = ul.children;
-  const match = null;
+  let match = null;
   for ( let i = 0; i < checkLetter.length; i++ ) {
     if (letterSelected === checkLetter[i].textContent) {
-      checkLetter[i].add('show');
-      match = letterSelected[i].textContent;
+      checkLetter[i].classList.add('show');
+      match = checkLetter[i].textContent;
     }
   }
   return match;
