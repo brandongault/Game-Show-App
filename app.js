@@ -21,6 +21,9 @@ const phrases = [
 // LISTEN FOR THE START GAME BUTTON TO BE PRESSED //
 startGame.addEventListener('click', () => {
     overlay.style.display = 'none';
+    const randomPhraseSelected = getRandomPhraseAsArray(phrases);
+    addPhraseToDisplay(randomPhraseSelected);
+
 });
 
 // RETURN A RANDOM PHRASE FROM AN ARRAY //
@@ -29,21 +32,19 @@ function getRandomPhraseAsArray(arr) {
     return arr[randomPhrase].split("");
 }
 // ADDS THE LETTERS OF A STRING TO THE DISPLAY //
-const randomPhraseSelected = getRandomPhraseAsArray;
 
-const addPhraseToDisplay = (getRandomPhraseAsArray) => {
-  for ( let i = 0; i < getRandomPhraseAsArray.length; i++ ) {
+const addPhraseToDisplay = (arr) => {
+  for ( let i = 0; i < arr.length; i++ ) {
     const listItem = document.createElement('li');
-    listItem.textContent = getRandomPhraseAsArray[i];
+    listItem.textContent = arr[i];
     ul.appendChild(listItem);
-    if (getRandomPhraseAsArray[i] !== " " ) {
+    if (arr[i] !== " " ) {
       listItem.className = "letter";
     } else {
       listItem.className = "space";
     }
   }
 }
-
 addPhraseToDisplay(randomPhraseSelected);
 
 // CHECK IF A LETTER IS IN THE PHRASE //
