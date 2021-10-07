@@ -47,8 +47,16 @@ const addPhraseToDisplay = (arr) => {
 }
 
 // CHECK IF A LETTER IS IN THE PHRASE //
-const checkLetter = button => {
-
+const checkLetterSelected = (letterSelected) => {
+  const checkLetter = ul.children;
+  const match = null;
+  for ( let i = 0; i < checkLetter.length; i++ ) {
+    if (letterSelected === checkLetter[i].textContent) {
+      checkLetter[i].add('show');
+      match = letterSelected[i].textContent;
+    }
+  }
+  return match;
 }
 // CHECK IF THE GAME HAS BEEN WON OR LOST //
 const checkWin = () => {
