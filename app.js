@@ -58,12 +58,22 @@ const checkLetterSelected = (letterSelected) => {
   }
   return match;
 }
+
+// LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED //
+qwerty.addEventListener('click', e => {
+});
+
 // CHECK IF THE GAME HAS BEEN WON OR LOST //
 const checkWin = () => {
 
 }
 
-// LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED //
-qwerty.addEventListener('click', e => {
 
-});
+
+
+
+
+
+
+
+// misc //
