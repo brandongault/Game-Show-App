@@ -1,7 +1,7 @@
 // VARIABLES //
 
 const overlay = document.getElementById('overlay');
-const qwerty = document.getElementById('qwerty');
+const keyboard = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const startGame = document.querySelector('.btn__reset');
 const letters = document.getElementsByTagName('button');
@@ -60,7 +60,14 @@ const checkLetterSelected = (letterSelected) => {
 }
 
 // LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED //
-qwerty.addEventListener('click', e => {
+keyboard.addEventListener('click', e => {
+
+  if (e.target.tagName === 'button') {
+    const button = e.target;
+    button.className = 'chosen';
+    button.disable = 'true';
+  }
+
 });
 
 // CHECK IF THE GAME HAS BEEN WON OR LOST //
