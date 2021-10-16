@@ -62,10 +62,11 @@ const checkLetterSelected = (letterSelected) => {
 // LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED //
 keyboard.addEventListener('click', e => {
 
-  if (e.target.tagName === 'button') {
+  if (e.target.tagName === 'BUTTON') {
     const button = e.target;
     button.className = 'chosen';
     button.disable = 'true';
+    checkLetter(button.textContent);
   }
 
 });
