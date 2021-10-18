@@ -6,6 +6,7 @@ const phrase = document.getElementById('phrase');
 const startGame = document.querySelector('.btn__reset');
 const letters = document.getElementsByTagName('button');
 const ul = phrase.firstElementChild;
+let missed = 0;
 
 
 // ARRAY //
@@ -67,12 +68,12 @@ keyboard.addEventListener('click', e => {
     button.disable = 'true';
     let match = checkLetterSelected(button.textContent);
       console.log(match);
-      if ( match === 'null') {
-        let imgLI = document.getElementsById("scoreboard").src = "images/liveHeart.png";
-        if ( imgLI.length >= 1 ) {
-               imgLI[0].src = "images/lostHeart.png";
+      if ( match === null) {
+        const images = document.querySelectorAll('.tries img');
+        if ( images.length >= 1 ) {
+               images[0].src = "images/lostHeart.png";
               }
-          missed++;
+               missed++;
         }
       }
 });
