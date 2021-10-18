@@ -77,7 +77,7 @@ keyboard.addEventListener('click', e => {
                missed++;
         }
       }
-
+        checkWin();
 });
 
 // CHECK IF THE GAME HAS BEEN WON OR LOST //
@@ -88,12 +88,12 @@ const checkWin = () => {
 
     if (liLetter.length === liShow.length) {
           overlay.className = ('win');
-          overlay.header.textContent = "You Won!";
+          header.textContent = "You Won!";
           overlay.style.display = "flex";
           console.log(checkWin);
         } else if ( missed > 4 ) {
           overlay.className = ('lose');
-          overlay.header.textContent = "You Lost. Try Again!"
+          header.textContent = "You Lost. Try Again!"
           overlay.style.display = "flex"
         }
     }
