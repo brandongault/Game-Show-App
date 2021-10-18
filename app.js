@@ -68,17 +68,7 @@ keyboard.addEventListener('click', e => {
     button.disable = 'true';
     checkLetter(button.textContent);
 
-    if (letterFound == null) {
-           selectedButton.disabled = true;
-           selectedButton.classList.add('disabled');
-           const imgLI = document.querySelectorAll("[src='images/liveHeart.png']");
-           if ( imgLI.length >= 1 ) {
-               imgLI[0].src = "images/lostHeart.png";
-           }
-           missed++;
-       } else {
-           selectedButton.classList.add('chosen');
-       }
+
 
   }
 
