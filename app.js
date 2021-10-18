@@ -11,11 +11,12 @@ let missed = 0;
 
 // ARRAY //
 const phrases = [
-  'we will cross that bridge when we come to it',
-  'a penny for your thoughts',
-  'birds of a feather flock together',
-  'once in  a blue moon',
-  'the early bird gets the worm',
+
+  'hakunna matata',
+  'avengers assemble',
+  'autobots rollout',
+  'gotta catch em all',
+  'may the force be with you'
 ];
 
 // LISTEN FOR THE START GAME BUTTON TO BE PRESSED //
@@ -76,28 +77,24 @@ keyboard.addEventListener('click', e => {
                missed++;
         }
       }
+      checkWin();
 });
 
 // CHECK IF THE GAME HAS BEEN WON OR LOST //
-/*const checkWin = () => {
-    const liLetter = document.querySelectorAll('li.letter');
-    const liShow = document.querySelectorAll('li.show');
+const checkWin = () => {
+    const liLetter = document.querySelectorAll("li.letter");
+    const liShow = document.querySelectorAll("li.show");
     if (liLetter.length === liShow.length) {
-        h2Header.style.display = 'none';
-        overlay.style.display = 'flex';
-        overlay.className = ('win');
-        overlay.firstElementChild.textContent = "You won!";
-        overlay.firstElementChild.style.background = 'none';
-        startButton.textContent = "Reset Game";
-    } else if (missed > 4) {
-        h2Header.style.display = 'none';
-        overlay.style.display = 'flex';
-        overlay.className = 'lose';
-        overlay.firstElementChild.textContent = "Better luck next time!";
-        overlay.firstElementChild.style.background = 'none';
-        startButton.textContent = "Reset Game";
+      overlay.className = ('win');
+      overlay.h2.textContent = "You Won!";
+      overlay.style.display = "flex";
+      console.log(checkWin);
+    } else if ( missed > 4 ) {
+      overlay.className = ('lose');
+      overlay.h2.textContent = "You Lost. Try Again!"
+      overlay.style.display = "flex"
     }
-}*/
+}
 
 
 
