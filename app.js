@@ -67,14 +67,45 @@ keyboard.addEventListener('click', e => {
     button.className = 'chosen';
     button.disable = 'true';
     checkLetter(button.textContent);
+
+    if (letterFound == null) {
+           selectedButton.disabled = true;
+           selectedButton.classList.add('disabled');
+           const imgLI = document.querySelectorAll("[src='images/liveHeart.png']");
+           if ( imgLI.length >= 1 ) {
+               imgLI[0].src = "images/lostHeart.png";
+           }
+           missed++;
+       } else {
+           selectedButton.classList.add('chosen');
+       }
+
   }
+
 
 });
 
 // CHECK IF THE GAME HAS BEEN WON OR LOST //
 const checkWin = () => {
-
+    const liLetter = document.querySelectorAll('li.letter');
+    const liShow = document.querySelectorAll('li.show');
+    if (liLetter.length === liShow.length) {
+        h2Header.style.display = 'none';
+        overlay.style.display = 'flex';
+        overlay.className = ('win');
+        overlay.firstElementChild.textContent = "You won!";
+        overlay.firstElementChild.style.background = 'none';
+        startButton.textContent = "Reset Game";
+    } else if (missed > 4) {
+        h2Header.style.display = 'none';
+        overlay.style.display = 'flex';
+        overlay.className = 'lose';
+        overlay.firstElementChild.textContent = "Better luck next time!";
+        overlay.firstElementChild.style.background = 'none';
+        startButton.textContent = "Reset Game";
+    }
 }
+
 
 
 
