@@ -66,7 +66,7 @@ keyboard.addEventListener('click', e => {
   if (e.target.tagName === 'BUTTON') {
     const button = e.target;
     button.className = 'chosen';
-    button.disable = 'true';
+    button.disabled = 'true';
     let match = checkLetterSelected(button.textContent);
       console.log(match);
       if ( match === null) {
