@@ -71,7 +71,7 @@ keyboard.addEventListener('click', e => {
       if ( match === null) {
         const images = document.querySelectorAll('.tries img');
         if ( images.length >= 1 ) {
-               images[0].src = "images/lostHeart.png";
+               images[missed].src = "images/lostHeart.png";
               }
                missed++;
         }
