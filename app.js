@@ -6,8 +6,7 @@ const phrase = document.getElementById('phrase');
 const startGame = document.querySelector('.btn__reset');
 const letters = document.getElementsByTagName('button');
 const ul = phrase.firstElementChild;
-let playerScore = 0;
-let wrongGuesses = 0;
+
 
 // ARRAY //
 const phrases = [
@@ -67,14 +66,19 @@ keyboard.addEventListener('click', e => {
     button.className = 'chosen';
     button.disable = 'true';
     let match = checkLetterSelected(button.textContent);
-    console.log(match);
-  }
-
-
+      console.log(match);
+      if ( match === 'null') {
+        let imgLI = document.getElementsById("scoreboard").src = "images/liveHeart.png";
+        if ( imgLI.length >= 1 ) {
+               imgLI[0].src = "images/lostHeart.png";
+              }
+          missed++;
+        }
+      }
 });
 
 // CHECK IF THE GAME HAS BEEN WON OR LOST //
-const checkWin = () => {
+/*const checkWin = () => {
     const liLetter = document.querySelectorAll('li.letter');
     const liShow = document.querySelectorAll('li.show');
     if (liLetter.length === liShow.length) {
@@ -92,7 +96,7 @@ const checkWin = () => {
         overlay.firstElementChild.style.background = 'none';
         startButton.textContent = "Reset Game";
     }
-}
+}*/
 
 
 
